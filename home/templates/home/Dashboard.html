@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <!-- linking bootstrap -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+
+    <!-- linking css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- linking JavaScript -->
+    <script src="{% static 'js/javas.js' %}"></script>     
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'home_page' %}">Ujjwal Jewelers</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home_page' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'customerdetails_page' %}">Customer Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'addproducts_page' %}">Add products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'productdetails_page' %}">Product Details</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+    </div>
+        {% block content %}
+        {% endblock %}
+</body>
+</html>
+

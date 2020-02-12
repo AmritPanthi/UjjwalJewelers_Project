@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- slider -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{% static 'images/hslider1.jpg' %}" alt="First slide" height="500px"> 
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{% static 'images/hslider2.jpg' %}" alt="Second slide" height="500px">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{% static 'images/hslider3.jpg' %}" alt="Third slide" height="500px">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<section>
+    <div class="container container-fluid mt-5">
+        <h1 class="text-center font-weight-bold pt-10">Who are we?</h1>
+        <hr class="w-25 mx-auto pt-5">
+
+        <div class="row mb-5">
+            <div class="col-lg-4 col-md-6 col-12">
+                <img src="{% static 'images/wre.jpg' %}" class="img-fluid" width="200px">
+            </div>
+            <div class="col-lg-8 col-md-6 col-12">
+                <p>The jewelry shop in Ujjwal is one of the popular shops established in 1997 A.D. in the town. It offers customers the services with confidence. This shop for the best designed gem of 100%
+                     24K gold is reminiscent of everybody. It lies on the Bhaluwang-Dang Rapti01.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About us end -->
+
+<!-- Services start -->
+<section>
+    <div class="container">
+        <h1 class="text-center font-weight-bold pt-10">Services</h1>
+        <hr class="w-25 mx-auto pt-5">
+
+        <div class="row text-center mb-5">
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'images/purity.jfif' %}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold">Purity guarantee</h4>
+                        <hr>
+                        <p class="card-text">We promise our customers that only 24k pure golden pieces are sold.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'images/exchange.jpg' %}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold">Exchange</h4>
+                        <hr>
+                        <p class="card-text">At the respective rate of that day, customers can easily exchange their
+                            jewelry in our shop at any time, without any deduction of the price except labor
+                            charges.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img class="card-img-top" src="{% static 'images/discount.jpg' %}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title font-weight-bold">Discounts</h4>
+                        <hr>
+                        <p class="card-text">We give our regular customers and occassionally discount on demand.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- Services end -->
+
+<!-- Information start -->
+<section class="bg-primary">
+    <article class="py-5 text-center text-white">
+        <h3 class="display-4">082-415032</h3>
+        <h4 class="display-4">+977 9857820817</h4>
+        <p>If you want to get more information about our services...</p>
+        <button class="btn btn-warning">Call us now !</button>
+    </article>
+</section>
+<!-- Information end -->
+
+<!-- Gallery start -->
+
+<section>
+    <div class="container">
+        <h1 class="text-center font-weight-boldpt-10">Gallery</h1>
+        <hr class="w-25 mx-auto pt-5">
+
+        <!-- to preview the images in gallery section responsively -->
+
+        <div class="row">
+            <div class="col-lg-4 col-md-2 col-12 mb-5">
+                <img src="{% static 'images/gal1.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-2 col-12 mb-5">
+                <img src="{% static 'images/gal1.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-2 col-12 mb-5">
+                <img src="{% static 'images/gal1.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-2 col-12 mb-5">
+                <img src="{% static 'images/gal1.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-2 col-12 mb-5">
+                <img src="{% static 'images/gal1.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-2 col-12 mb-5">
+                <img src="{% static 'images/gal1.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-2 col-12 mb-5">
+                <img src="{% static 'images/gal1.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-2 col-12 mb-5">
+                <img src="{% static 'images/gal1.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col-lg-4 col-md-2 col-12 mb-5">
+                <img src="{% static 'images/gal1.jpg' %}" class="img-fluid">
+            </div>
+
+        </div>
+</section>
+<!-- Gallery end -->
+
+<!-- Contact us start -->
+
+<section>
+    <div class="container mb-5">
+        <h1 class="text-center font-weight-bold text-capitalize pt-10">Contact us</h1>
+        <hr class="w-25 mx-auto pt-5">
+
+        <div class="w-50 mx-auto">
+            <form action="/action_page.php">
+                <div class="form-group">
+                    <label for="email">Full name:</label>
+                    <input type="text" class="form-control" placeholder="Enter your full name" id="fullname">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Email:</label>
+                    <input type="text" class="form-control" placeholder="Enter your email id" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">Contact no:</label>
+                    <input type="number" class="form-control" placeholder="Enter your contact no." id="contact">
+                </div>
+                <div class="form-group">
+                    <label>Your message:</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Remember me
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+</section>
+
+<!-- Contact us end -->
+
+{% endblock %}

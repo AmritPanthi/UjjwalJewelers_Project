@@ -1,0 +1,16 @@
+{% extends 'home/Dashboard.html' %}
+
+{% block content %}  
+
+<!-- to add the products in the web applicatio -->
+<div class="col-md-6">   
+<form method="POST" action="{% url 'addproducts_page' %}" enctype= "multipart/form-data" class="form-group"> 
+    {% csrf_token %}
+    <input type="text" placeholder="Name" name="name" class="form-control"><br>
+    <input type="text" placeholder="Price" name="price" class="form-control"><br>
+    <input type="file" name="image" class="form-control"><br>
+    <button type="submit"  class="btn btn-success">Submit</button>
+</form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'home_page' %}">Ujjwal Jewelers</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home_page' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profile_page' %}">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'rate_page' %}">Rate</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li>Hello, {{user.username}}</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'logout_page' %}">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'buy_now_page' %}">Buy now</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login_page' %}">Login</a>
+                </li>
+              
+                {% endif %}
+                
+                
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+
+
+    {% block content %}
+       <!-- we write scripts inside this -->
+    {% endblock %}
+    <!-- Footer start -->
+
+    <footer class="text-center text-white bg-dark footer-design">
+        <p> &copy; Ujjwaljewelers.com.np 2019</p>
+    
+E-Mail:UjjwalJewelry77@gmail.com<br>
+Location: Bhaluwang, Dang<br>
+Contact: +977 9857820817
+   </footer>
+   <!-- Footer end -->
+
+</body>
+<script src="{% static 'js/javas.js' %}" ></script>
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+
+</html>

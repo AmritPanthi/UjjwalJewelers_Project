@@ -1,0 +1,13 @@
+{% extends 'home/Dashboard.html' %}
+
+{% block content %}  
+
+<form method="POST" action="{% url 'updateproducts_page' product.id %}" enctype= "multipart/form-data">
+    {% csrf_token %}
+    <input type="text" placeholder="Name" value="{{ product.name }}" name="name">
+    <input type="text" placeholder="Price" value="{{ product.price }}" name="price">
+    <input type="file" name="image" value="{{ product.image.url }}">
+    <button type="submit" >Submit</button>
+</form>
+
+{% endblock content %}

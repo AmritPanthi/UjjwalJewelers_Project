@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %} 
+
+<div class="form">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+            <button type="button" class="toggle-btn" onclick="signup()">Sign up</button>
+        </div>
+        
+        <form id="login" class="input-group" method="POST" action="{% url 'login_page' %}">
+            {% csrf_token %}
+            <input type="text" class="input-field" name="username" placeholder="Username" required>
+            <input type="password" class="input-field" name="password" placeholder="Password" required>
+            {% if error %}
+                <p class="text-danger" >{{ error }}</p>
+            {% endif %}
+            <button type="Submit" class="submit-btn mt-5">Login</button>
+        </form>
+
+        <form id="signup" class="input-group" method="post" action="{% url 'signup_page' %}">
+            {% csrf_token %}
+            <input type="text" class="input-field" name="username" placeholder="Username" required>
+            <input type="text" class="input-field" name="email"  placeholder="Email" required>
+            <input type="password" class="input-field" name="password"  placeholder="Password" required>
+            <input type="password" class="input-field"  name="cpassword" placeholder="Confirm password" required>
+            <button type="Submit" class="submit-btn">Sign up</button>
+        </form>
+    </div>
+  
+</div>
+
+{% endblock %}

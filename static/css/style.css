@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
+
+body{
+    font-family: 'Gelasio', serif;
+}
+.form{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 6% auto;
+    background: rgb(223, 219, 219);
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 5%;
+}
+.button-box{
+    width: 370px;
+    height: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #ff61241f;
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 65px;
+    cursor: pointer;
+    background: transparent;
+    border: 0px;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 170px;
+    height: 42px;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+.social-icons{
+    margin: 30px auto;
+    text-align: center;
+}
+.social-icons img{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.input-group{
+    padding-top: 20px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    margin-top: 20px;
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-bottom: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin: 30px 10px 0;
+}
+span{
+    color: #777;
+    font-size: 15px;
+    bottom: 28px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#signup{
+    left: 450px;
+}
+.footer-design{padding: 8px;}
+.space{
+    height: 113px;;
+}
+* {
+    box-sizing: border-box;
+  }
+
+
+    
